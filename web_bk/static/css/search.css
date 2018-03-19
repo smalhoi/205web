@@ -1,0 +1,56 @@
+main {
+  width: 100%;
+  min-height: 300px;
+}
+/*container of the element*/
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  min-width: 750px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+}
+/*the outlook of the employee info box*/
+
+.img, .character, .ability {
+  position: relative;
+  width: 30%;
+  height: 100%;
+}
+/*position of the left conner*/
+
+.img img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 150px;
+  width: 150px;
+}
+/*setting of the image*/
+
+.ability, .character {
+  padding-top: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+/*position of the right colume*/
+
+.ability span, .character span {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.ability span:first-child, .character span:first-child {
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.ability span:first-child img, .character span:first-child img {
+  height: 30px;
+  width: 30px;
+}

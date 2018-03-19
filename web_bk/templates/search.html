@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}<link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+{% for i in info %}
+	
+    <div class="info">
+    <div class="img">
+    <img src="{{ url_for('static', filename='image/' + i.avatar ) }}" alt="">
+    </div>
+		
+    <div class="character">
+    <span>
+    <img src="{{ url_for('static', filename='image/pi.png') }}" alt="">
+        Basic Infomation
+    </span>
+      <span>Age: {{ i.age }}</span>
+      <span>Education: {{ i.education }}</span>
+      <span>Nationlity: {{ i.nationality }}</span>
+      <span>Married Status: {{ i.married_status }}</span>
+    </div>
+		
+    <div class="ability">
+    <span>
+    <img src="{{ url_for('static', filename='image/skill.png') }}" alt="">
+        Special Abilities
+    </span>
+    {% for k in i.skills %}
+      <span>{{ k.skill_name }}</span>
+    {% endfor %}
+    </div>
+    </div>
+	
+<br>
+{% endfor %}
+</main>
+{% endblock %}

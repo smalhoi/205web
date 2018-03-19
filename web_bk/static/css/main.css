@@ -1,0 +1,55 @@
+body {
+    font-family: Verdana;
+    font-size: 12px;
+    color:#333
+}
+/*set the font style, size and color of the site*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/*keep the element in the center*/
+
+table.HomeTable {
+  width: 80%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 0px;
+  color: #000000;
+}
+/*the outlook of the HomeTable*/
+
+table.HomeTable td {
+  border-width: 0px;
+  padding: 5px;
+}
+/*the outlook of the td of the HomeTable*/
+
+#wrapper {
+    margin: 0 auto;
+    width: 650px;
+	float: center;
+}
+/*wrapper for contain element*/
+
+.rebutton {
+background-color: #555555;
+color: white;
+border: 2px solid #555555;
+padding: 7px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+border-radius: 4px;
+}
+/*outlook setting of the submit button in check.htmk*/
+
+.rebutton:hover {
+background-color: white;
+color: black;
+}
+/*outlook setting when mouse poting on it*/

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+    {% block head %}
+    <meta charset="utf-8">
+    <title>Employment Agency</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    {% endblock %}
+
+</head>
+<body>
+
+    {% block header %}
+    <header>
+    <img style="margin: auto; display: block;" src="{{ url_for('static', filename='image/logo.png') }}" width="250" height="90" alt="" />
+    <nav id="header" class="navbar navbar-default ">
+        <ul class="nav navbar-nav navbar-center">
+          <li><a href="{{ url_for('index') }}"> Home </a></li>
+          <li><a href="{{ url_for('search') }}"> Search helpers </a></li>
+          <li><a href="{{ url_for('book') }}"> Helper book </a></li>
+          <li><a href="{{ url_for('check') }}"> Requirements checking </a></li>
+          <li><a href="{{ url_for('contact') }}"> Contact </a></li>
+        </ul>
+    </nav>
+    </header>
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

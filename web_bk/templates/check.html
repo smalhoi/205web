@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="wrapper">
+<br>
+	
+	<h4><strong>Online checking for the requirement</strong></h4>
+	<p>
+    <font color="red">IMPORTANT</font> - All the field must be
+    <font color="red">PASS</font> in order to meet the requirement</p>
+	<br>
+
+	<p>1. Are you a Hong Kong permanent resident or possesses company employment contract?</p>
+	<select id="q1">
+	<option value="1">Yes</option>
+	<option value="2">No</option>
+    </select>
+	<p id="res1"></p>
+	<script>
+		function ques1() {
+		var x, text;
+		var x = document.getElementById("q1").value;
+		if (x == 1) {
+		text = "PASS"
+		} else {
+		text = "Sorry, only Hong Kong permanent resident or possesses company employment contract can apply for a Helper in Hong Kong"
+		}
+		document.getElementById("res1").innerHTML = text;
+		}
+	</script>
+
+	<p>2. Can you provide the Helper with suitable accommodation?</p>
+	<select id="q2">
+	<option value="1">Yes</option>
+	<option value="2">No</option>
+	</select>
+	<p id="res2"></p>
+	<script>
+		function ques2() {
+		var x, text;
+		var x = document.getElementById("q2").value;
+		if (x == 1) {
+		text = "PASS"
+		} else {
+		text = "Sorry, employers should provide the Helper with suitable accommodation"
+		}
+		document.getElementById("res2").innerHTML = text;
+		}
+	</script>
+
+	<p>3. Can you provide free return air ticket to the Helper?</p>
+	<select id="q3">
+	<option value="1">Yes</option>
+	<option value="2">No</option>
+	</select>
+	<p id="res3"></p>
+	<script>
+		function ques3() {
+		var x, text;
+		var x = document.getElementById("q3").value;
+		if (x == 1) {
+		text = "PASS"
+		} else {
+		text = "Sorry, employer should provide free return air ticket to the Helper"
+		}
+		document.getElementById("res3").innerHTML = text;
+		}
+	</script>
+
+	<p>4. Can you speak simple English?</p>
+	<select id="q4">
+	<option value="1">Yes</option>
+	<option value="2">No</option>
+	</select>
+	<p id="res4"></p>
+	<script>
+		function ques4() {
+		var x, text;
+		var x = document.getElementById("q4").value;
+		if (x == 1) {
+		text = "PASS"
+		} else {
+		text = "Sorry, fair language abilities is important for communication"
+		}
+		document.getElementById("res4").innerHTML = text;
+		}
+	</script>
+
+	<p>5.Input your annual household income:</p>
+	<input id="q5">
+	<p id="res5"></p>
+	<script>
+		function ques5() {
+		var x, text;
+		x = document.getElementById("q5").value;
+		if (x >= 180000) {
+		text = "PASS";
+		} else {
+		text = "Sorry, annual household income of must no less than HK$180,000 (monthly salary of HK$15,000)";
+		}
+		document.getElementById("res5").innerHTML = text;
+		}
+	</script>
+
+	<button type="button" class="rebutton" onclick="ques1(), ques2(), ques3(), ques4(), ques5()">Submit</button>
+	
+</div>
+{% endblock %}

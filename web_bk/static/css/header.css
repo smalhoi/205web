@@ -1,0 +1,27 @@
+#header.navbar-default {
+    font-size: 14px;
+    background-color: rgba(51, 51, 51, 1);
+    border-width: 0px;
+    border-radius: 4px;
+}
+/*default setting of the navbar*/
+
+#header.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(51, 51, 51, 1);
+}
+/*set the color of the button into #333*/
+
+#header.navbar-default .navbar-nav>li>a:hover,
+#header.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(68, 68, 68, 1);
+}
+/*set the color of the button into #444 when mouse point on it*/
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+/*set the button in the center*/

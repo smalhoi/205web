@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contactbox.css') }}"> {% endblock %} {% block content %}
+<div id="wrapper">
+	
+	<h4><strong>Contact</strong></h4>
+	<p>Tel: (852) 23800000</p>
+	<p>Fax: (852) 23700000</p>
+	<p>e-mail: frog@employment.com.hk</p>
+	<br
+		
+	<h4><strong>Address</strong></h4>
+	<p>6/F Hong Kong Bank Center, Yee Wo St, Causeway Bay</p>
+	<p>Friday to Wednesday: 10:30 AM- 8:00PM. (Thursday and Labor Holidays off)</p>
+	<br>
+
+	<h4><strong>Support</strong></h4>
+	<p>If you have any further queries, please do not hesitate to contact us. We will reply you as soon as possible within working time.</p>
+
+	<div class="container">
+    <form action="{{ url_for('contact',  _method='POST') }}" method="POST">
+    <div class="row">
+    <div class="leftcol">
+    <label for="fname">Name</label>
+    </div>
+    <div class="rightcol">
+    {{ form.name }}
+    </div>
+    </div>
+		
+    <div class="row">
+    <div class="leftcol">
+    <label for="fname">Phone no.</label>
+    </div>
+    <div class="rightcol">
+    {{ form.phone }}</div>
+    </div>
+		
+    <div class="row">
+    <div class="leftcol">
+    <label for="lname">e-mail</label>
+    </div>
+    <div class="rightcol">
+    {{ form.email }}
+    </div>
+    </div>
+		
+    <div class="row">
+    <div class="leftcol">
+    <label for="subject">Questions</label>
+    </div>
+    <div class="rightcol">
+    {{ form.question(cols="35", rows="10") }}
+    </div>
+    </div>
+    <br>
+		
+    <div class="row">
+    <input type="submit" value="Submit">
+    </div>
+    {{ form.csrf_token }}
+    </form>
+	</div>
+    </div>
+
+{% endblock %}
